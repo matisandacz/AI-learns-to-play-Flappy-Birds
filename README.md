@@ -4,7 +4,7 @@ Here is the source code for a Python project that implements a machine learning 
 
 All code is written in Python using [Pygame](https://www.pygame.org/news) and [NEAT](https://neat-python.readthedocs.io/en/latest/) for genetic algorithm implementation.
 
-![Flappy Bird Screenshot](https://github.com/matisandacz/AI-learns-to-play-Flappy-Birds/tree/main/imgs/flappyBirds.PNG)
+![Flappy Bird Screenshot](https://github.com/matisandacz/AI-learns-to-play-Flappy-Birds/tree/main/imgs/flappyBirds.PNG "Flappy Birds")
 
 ## Neural Network Architecture
 
