@@ -8,12 +8,13 @@ All code is written in Python using [Pygame](https://www.pygame.org/news) and [N
 
 ## Neural Network Architecture
 
-To play the game, each unit (bird) has its own neural network consisted of several layers. All of them have 2 layers in common:
-1. an input layer with 2 neurons presenting what a bird sees:
+To play the game, each unit (bird) has its own neural network consisted of 2 layers:
+1. an input layer with 3 neurons presenting what a bird sees:
      
      ```
-     1) height difference between the bird and the closest top Pipe
-     2) height difference between the bird and the closest bottom Pipe
+     1) bird's height
+     1) height difference between the bird and the next top Pipe
+     2) height difference between the bird and the next bottom Pipe
      ```
      
 2. an output layer with 1 neuron used to provide an action as follows:
@@ -30,13 +31,15 @@ The main concept of machine learning implemented in this program is based on the
 3. for each unit calculate its **fitness** function to measure its quality as:
 
     ```
-    fitness = total travelled distance * 0.1 + 5 * number of pillars
+    fitness = 0.1 * total travelled distance + 5 * number of pillars passed through.
     ```
-4. when all units are killed, evaluate the current population to the next one using **genetic algorithm operators** (selection, crossover and mutation) as follows:
-
-    ```
-    Complete
-    ```
+4. when all units are killed, evaluate the current population to the next one using **genetic algorithm operators**:
+     
+     ```
+     1) selection
+     2) crossover
+     3) mutation
+     ```
     
 5. go back to the step 2
 
