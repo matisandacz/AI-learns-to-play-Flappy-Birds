@@ -11,6 +11,8 @@ WIN_WIDTH = 600
 WIN_HEIGHT = 800
 score = 0
 
+NUM_GENERATIONS = 50
+
 pygame.display.set_caption("AI Learns to play Flappy Bird")
 win = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 
@@ -179,6 +181,8 @@ def moveBirds(birds, genomes_copy, nets, pipes, pipeIdx):
     
 def run(config_file):
     
+    global NUM_GENERATIONS
+
     config = neat.config.Config(neat.DefaultGenome, neat.DefaultReproduction,
                          neat.DefaultSpeciesSet, neat.DefaultStagnation,
                          config_file)
@@ -192,7 +196,7 @@ def run(config_file):
     p.add_reporter(stats)
 
     # Run for up to 50 generations.
-    winner = p.run(eval_genomes, 50)
+    winner = p.run(eval_genomes, NUM_GENERATIONS)
 
     # show final stats
     print('\nBest genome:\n{!s}'.format(winner))
